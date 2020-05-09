@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Button from './Button';
-import Breadcrumb from './Breadcrumb';
+import { Breadcrumb } from './components/Breadcrumb';
+import Button from './components/Button/Button';
+import { Card } from './components/Card';
+import avatar1 from '../assets/images/img_avatar_1.png';
 
 function App() {
 
@@ -24,10 +26,23 @@ function App() {
     { name: 'Brazil' }
   ];
 
+  const profiles = [
+    { avatar: avatar1, title: 'Jhon Doe', description: 'Architect' },
+    { avatar: avatar1, title: 'Jane Doe', description: 'Interior Designer' }
+  ];
 
 
   return (
     <div>
+
+      <div>
+        <Card />
+      </div>
+
+
+
+
+
 
       <div>
         <Breadcrumb values={breadcrumb1} />
