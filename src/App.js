@@ -3,7 +3,8 @@ import './App.css';
 import { Breadcrumb } from './components/Breadcrumb';
 import Button from './components/Button/Button';
 import { Card } from './components/Card';
-import avatar1 from '../assets/images/img_avatar_1.png';
+import avatar1 from './assets/images/img_avatar_1.png';
+import { Counter } from './components/Counter';
 
 function App() {
 
@@ -34,6 +35,14 @@ function App() {
 
   return (
     <div>
+
+      <div>
+        <Counter />
+        <Counter />
+
+      </div>
+
+      <hr />
 
       <div>
         <Card />
