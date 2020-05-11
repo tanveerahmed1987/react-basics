@@ -5,6 +5,7 @@ import Button from './components/Button/Button';
 import { Card } from './components/Card';
 import avatar1 from './assets/images/img_avatar_1.png';
 import { Counter } from './components/Counter';
+import { Tab } from './components/Tab';
 
 function App() {
 
@@ -32,11 +33,52 @@ function App() {
     { avatar: avatar1, title: 'Jane Doe', description: 'Interior Designer' }
   ];
 
+  const tabHeaders = [
+    { id: 'java', name: 'Java' },
+    { id: 'react', name: 'React JS' },
+    { id: 'html', name: 'HTML' },
+    { id: 'js', name: 'Javascript' },
+    { id: 'csharp', name: 'C#' }
+  ];
+
 
   return (
     <div>
 
-      <div>
+
+      <Tab headers={tabHeaders}>
+        <div key="java" className="tabcontent">
+          <h3>Java</h3>
+          <p>London is the capital city of England.</p>
+        </div>
+
+        <div key="react" className="tabcontent">
+          <h3>React</h3>
+          <p>Paris is the capital of France.</p>
+        </div>
+
+        <div key="html" className="tabcontent">
+          <h3>HTML</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div key="csharp" className="tabcontent">
+          <h3>C#</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+
+        <div key="js" className="tabcontent">
+          <h3>Javascript</h3>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </Tab>
+
+
+
+      {/* <Tab /> */}
+
+
+      {/* <div>
         <Counter />
         <Counter />
 
@@ -80,7 +122,7 @@ function App() {
         <Button type="info" onClick={onClickHandler}>Info</Button>
         <Button type="default" onClick={onClickHandler}>Default</Button>
         <Button type="primary" onClick={onClickHandler}>Primary</Button>
-      </div>
+      </div> */}
     </div>
   );
 }
